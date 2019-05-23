@@ -889,3 +889,6 @@ print "本地时间为 :", localtime
 本地时间为 : time.struct_time(tm_year=2016, tm_mon=4, tm_mday=7, tm_hour=10, tm_min=3, tm_sec=27, tm_wday=3, tm_yday=98, tm_isdst=0)
 ```
 
+### Python常见面试题
+
+参考：[](https://github.com/kenwoodjw/python_interview_question)
