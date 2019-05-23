@@ -891,6 +891,4 @@ print "本地时间为 :", localtime
 
 ### Python常见面试题
 
-参考：[### Python常见面试题
-
 参考：[](https://github.com/kenwoodjw/python_interview_question)](https://github.com/kenwoodjw/python_interview_question)
