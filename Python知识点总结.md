@@ -600,7 +600,7 @@ def make_averager():
 
 在 averager 函数中，series 是**自由变量**（free variable）。这是一个技术术语，指未在本地作用域中绑定的变量，参见下图。
 
-![](C:\Users\zz\Desktop\pictures\1.png)
+![](https://github.com/XU-ZHOU/Python/blob/master/pictures/1.png)
 
 ​				上图：**averager** 的闭包延伸到那个函数的作用域之外，包含自由变量 **series** 的绑定 
 
