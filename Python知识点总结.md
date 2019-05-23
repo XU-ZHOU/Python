@@ -744,15 +744,15 @@ False
 
 1、**b = a:** 赋值引用，a 和 b 都指向同一个对象。
 
-![](C:\Users\zz\Desktop\pictures\3.png)
+![](https://github.com/XU-ZHOU/Python/blob/master/pictures/3.png)
 
 **2、b = a.copy():** 浅拷贝, a 和 b 是一个独立的对象，但他们的子对象还是指向统一对象（是引用）。默认做潜复制。
 
-![](C:\Users\zz\Desktop\pictures\2.png)
+![](https://github.com/XU-ZHOU/Python/blob/master/pictures/2.png)
 
 **3.b = copy.deepcopy(a):** 深度拷贝, a 和 b 完全拷贝了父对象及其子对象，两者是完全独立的。
 
-![](C:\Users\zz\Desktop\pictures\QQ截图20190523144812.png)
+![](https://github.com/XU-ZHOU/Python/blob/master/pictures/4.png)
 
 ### 4.**del**和垃圾回收
 
@@ -827,7 +827,7 @@ gc模快有一个自动垃圾回收的阀值，即通过`gc.get_threshold`函数
 
 标记清除（Mark—Sweep）』算法是一种基于追踪回收（tracing GC）技术实现的垃圾回收算法。它分为两个阶段：第一阶段是标记阶段，GC会把所有的『活动对象』打上标记，第二阶段是把那些没有标记的对象『非活动对象』进行回收。那么GC又是如何判断哪些是活动对象哪些是非活动对象的呢？
 
-![](C:\Users\zz\Desktop\pictures\QQ截图20190523150205.png)
+![](https://github.com/XU-ZHOU/Python/blob/master/pictures/5.png)
 
 对象之间通过引用（指针）连在一起，构成一个有向图，对象构成这个有向图的节点，而引用关系构成这个有向图的边。从根对象（root object）出发，沿着有向边遍历对象，可达的（reachable）对象标记为活动对象，不可达的对象就是要被清除的非活动对象。**根对象就是全局变量、调用栈、寄存器**。 mark-sweepg 在上图中，我们把小黑圈视为全局变量，也就是把它作为root object，从小黑圈出发，对象1可直达，那么它将被标记，对象2、3可间接到达也会被标记，而4和5不可达，那么1、2、3就是活动对象，4和5是非活动对象会被GC回收。
 
